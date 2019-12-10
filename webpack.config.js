@@ -1,7 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackAssetsPlugin = require('html-webpack-assets-plugin');
 
 module.exports = {
     entry: './index.js',
@@ -64,22 +63,7 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
-            title: 'Palette',
-            template: './index.html',
-        }),
-
-        new HtmlWebpackAssetsPlugin({
-            assets: {
-                './assets': './assets',
-            },
-            link: [
-                { href: '/assets/icons/arrows-alt.svg', rel: 'icon' },
-                { href: '/assets/icons/exchange-alt.svg', rel: 'icon' },
-                { href: '/assets/icons/eye-dropper.svg', rel: 'icon' },
-                { href: '/assets/icons/fill-drip.svg', rel: 'icon' },
-                { href: '/assets/icons/pencil.svg', rel: 'icon' },
-                { href: '/assets/icons/search-icon.svg', rel: 'icon' },
-            ],
+            template: 'index.html',
         }),
     ],
 

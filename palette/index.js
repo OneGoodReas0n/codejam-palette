@@ -1,1 +1,1 @@
-import './palette/style.scss';
+import './style.scss';
