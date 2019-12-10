@@ -1,0 +1,195 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 900px;
+  background-color: rgba(238, 238, 238, 0.3);
+}
+
+input[type=color] {
+  -webkit-appearance: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.bar {
+  padding-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 0 4px 0, rgba(0, 0, 0, 0.24) 0 4px 4px 0;
+}
+
+.item-text {
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.54);
+  pointer-events: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 0 4px 0, rgba(0, 0, 0, 0.24) 0 4px 4px 0;
+  background-color: #ffffff;
+}
+.header .menu-left {
+  display: flex;
+  align-items: center;
+}
+.header .menu-left .burger {
+  margin: 0 35px 0 15px;
+}
+.header .menu-left .burger .burger__line {
+  display: block;
+  width: 18px;
+  height: 3px;
+  margin-top: 3px;
+  background-color: rgba(0, 0, 0, 0.54);
+}
+.header .menu-left .project-name-text {
+  justify-content: flex-start;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+.header .settings-btn {
+  margin: 0 15px 5px 0;
+}
+.header .settings-btn .settings-btn__round {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+.content {
+  display: flex;
+  margin-top: 70px;
+}
+.content .left-wrapper {
+  width: 14.5%;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+.content .left-wrapper .tools-bar {
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.content .left-wrapper .tools-bar .tools-bar__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+.content .left-wrapper .tools-bar .tools-bar__item:nth-child(3)::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: 60px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.content .left-wrapper .tools-bar .tools-bar__item:hover {
+  filter: brightness(0.95);
+}
+.content .left-wrapper .tools-bar .tools-bar__item .item-icon {
+  margin: 20px 40px 20px 20px;
+}
+.content .left-wrapper .tools-bar .tools-bar__item_active {
+  background-color: rgba(0, 120, 0, 0.2);
+}
+.content .left-wrapper .colors-bar {
+  margin-top: 92px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.content .left-wrapper .colors-bar .colors-bar__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.content .left-wrapper .colors-bar .colors-bar__item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.content .left-wrapper .colors-bar .colors-bar__item .item-color-block {
+  width: 20px;
+  height: 20px;
+  margin: 20px 20px 20px 20px;
+  border-radius: 50%;
+  border: 1px solid #bbb;
+  pointer-events: none;
+}
+.content .left-wrapper .colors-bar .colors-bar__item .color-well {
+  pointer-events: visible;
+  border: none;
+}
+.content .right-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.content .right-wrapper .canvas-wrapper {
+  display: flex;
+  height: fit-content;
+  margin-left: 300px;
+  border: 1px solid #000000;
+}
+.content .right-wrapper .canvas-wrapper .canvas {
+  background-color: #ffffff;
+}
+.content .right-wrapper .select-list {
+  width: 14.5%;
+  height: fit-content;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.content .right-wrapper .select-list .select-list__item {
+  display: flex;
+  align-items: center;
+}
+.content .right-wrapper .select-list .select-list__item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.content .right-wrapper .select-list .select-list__item .item-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  pointer-events: none;
+}
+.content .right-wrapper .select-list .select-list__item .item-selector .item-selector__fill {
+  display: none;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.54);
+}
+.content .right-wrapper .select-list .select-list__item_active .item-selector .item-selector__fill {
+  display: block;
+}
